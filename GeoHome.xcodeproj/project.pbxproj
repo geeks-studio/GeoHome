@@ -17,6 +17,7 @@
 		8276C6651CF77B580006DEC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6641CF77B580006DEC1 /* User.swift */; };
 		8276C6671CF77BBD0006DEC1 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6661CF77BBD0006DEC1 /* Scenario.swift */; };
 		8276C6691CF77D740006DEC1 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6681CF77D740006DEC1 /* Trigger.swift */; };
+		8276C66B1CF77E1F0006DEC1 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C66A1CF77E1F0006DEC1 /* Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8276C6641CF77B580006DEC1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8276C6661CF77BBD0006DEC1 /* Scenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 		8276C6681CF77D740006DEC1 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
+		8276C66A1CF77E1F0006DEC1 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				8276C6641CF77B580006DEC1 /* User.swift */,
 				8276C6661CF77BBD0006DEC1 /* Scenario.swift */,
 				8276C6681CF77D740006DEC1 /* Trigger.swift */,
+				8276C66A1CF77E1F0006DEC1 /* Action.swift */,
 				8276C6531CF7741F0006DEC1 /* Assets.xcassets */,
 				8276C6551CF7741F0006DEC1 /* LaunchScreen.storyboard */,
 				8276C6581CF7741F0006DEC1 /* Info.plist */,
@@ -155,6 +158,7 @@
 				8276C6631CF7763B0006DEC1 /* ProfileViewController.swift in Sources */,
 				8276C6671CF77BBD0006DEC1 /* Scenario.swift in Sources */,
 				8276C6691CF77D740006DEC1 /* Trigger.swift in Sources */,
+				8276C66B1CF77E1F0006DEC1 /* Action.swift in Sources */,
 				8276C6651CF77B580006DEC1 /* User.swift in Sources */,
 				8276C6611CF7762A0006DEC1 /* ShopViewController.swift in Sources */,
 			);
