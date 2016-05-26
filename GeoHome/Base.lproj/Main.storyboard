@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GeoHome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ActiveScenariosViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,156 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XmN-r4-CjC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XmN-r4-CjC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="52g-xj-Ay1"/>
+                            <constraint firstAttribute="bottom" secondItem="XmN-r4-CjC" secondAttribute="bottom" id="HIS-ex-Sae"/>
+                            <constraint firstAttribute="trailing" secondItem="XmN-r4-CjC" secondAttribute="trailing" id="Shb-yp-ydV"/>
+                            <constraint firstItem="XmN-r4-CjC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="buM-5m-No1"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Активные сценарии" id="g3s-Vi-Xjw"/>
+                    <navigationItem key="navigationItem" title="GeoHome" id="Ifd-kg-weS"/>
+                    <connections>
+                        <outlet property="tableView" destination="XmN-r4-CjC" id="lfh-GF-Iuh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1879" y="389"/>
+        </scene>
+        <!--Магазин-->
+        <scene sceneID="NnO-sm-vC2">
+            <objects>
+                <viewController id="hCh-Sp-br8" customClass="ShopViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nwq-hb-avS"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Zt-Vi-RlB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4BL-jt-z5u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BZn-Q6-QPx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BZn-Q6-QPx" secondAttribute="trailing" id="S4L-99-r1k"/>
+                            <constraint firstAttribute="bottom" secondItem="BZn-Q6-QPx" secondAttribute="bottom" id="dfR-q3-9tL"/>
+                            <constraint firstItem="BZn-Q6-QPx" firstAttribute="leading" secondItem="4BL-jt-z5u" secondAttribute="leading" id="iUl-09-p02"/>
+                            <constraint firstItem="BZn-Q6-QPx" firstAttribute="top" secondItem="4BL-jt-z5u" secondAttribute="top" id="nzN-No-50Z"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Магазин" id="b85-Xq-OY1"/>
+                    <connections>
+                        <outlet property="tableView" destination="BZn-Q6-QPx" id="IHE-5J-dkr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xP-fQ-Fy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067" y="1204"/>
+        </scene>
+        <!--Личный профиль-->
+        <scene sceneID="eVb-xL-xL5">
+            <objects>
+                <viewController id="VwB-h7-L3c" customClass="ProfileViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mF6-jV-eCq"/>
+                        <viewControllerLayoutGuide type="bottom" id="U0t-Xa-0Yu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IMI-ip-XM6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJk-b5-cWO">
+                                <rect key="frame" x="260" y="28" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Dyb-Bg-7kp"/>
+                                    <constraint firstAttribute="height" constant="80" id="hxg-0X-Jir"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вадим Дробинин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-3a-IFo">
+                                <rect key="frame" x="231" y="116" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория: Создатель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-MT-d3a">
+                                <rect key="frame" x="212" y="145" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIT-uC-apo">
+                                <rect key="frame" x="209" y="174" width="182" height="30"/>
+                                <state key="normal" title="Управление категориями"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0L-1L-v8g">
+                                <rect key="frame" x="217" y="212" width="166" height="30"/>
+                                <state key="normal" title="Управление аккаунтом"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-uC-xcU">
+                                <rect key="frame" x="226" y="250" width="149" height="30"/>
+                                <state key="normal" title="Смена пользователя"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jd5-3a-IFo" firstAttribute="top" secondItem="SJk-b5-cWO" secondAttribute="bottom" constant="8" id="1hf-Qr-0wv"/>
+                            <constraint firstItem="0yE-MT-d3a" firstAttribute="top" secondItem="jd5-3a-IFo" secondAttribute="bottom" constant="8" id="4sp-ih-hq2"/>
+                            <constraint firstItem="jd5-3a-IFo" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="6Y7-rS-v1t"/>
+                            <constraint firstItem="G0L-1L-v8g" firstAttribute="top" secondItem="KIT-uC-apo" secondAttribute="bottom" constant="8" id="8yp-mF-Qlb"/>
+                            <constraint firstItem="KIT-uC-apo" firstAttribute="top" secondItem="0yE-MT-d3a" secondAttribute="bottom" constant="8" id="CQ8-Q0-bAv"/>
+                            <constraint firstItem="OCd-uC-xcU" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="L5l-iG-gtw"/>
+                            <constraint firstItem="0yE-MT-d3a" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="M0U-Nu-u68"/>
+                            <constraint firstItem="OCd-uC-xcU" firstAttribute="top" secondItem="G0L-1L-v8g" secondAttribute="bottom" constant="8" id="NZ9-hw-5g9"/>
+                            <constraint firstItem="SJk-b5-cWO" firstAttribute="top" secondItem="mF6-jV-eCq" secondAttribute="bottom" constant="8" id="Swx-Tx-CwR"/>
+                            <constraint firstItem="G0L-1L-v8g" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="gTp-DE-XNK"/>
+                            <constraint firstItem="SJk-b5-cWO" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="nQA-OR-XXA"/>
+                            <constraint firstItem="KIT-uC-apo" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="sWt-Q3-nFD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Личный профиль" id="s4h-kY-cN5"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="SJk-b5-cWO" id="yTn-U8-ALM"/>
+                        <outlet property="categoryLabel" destination="0yE-MT-d3a" id="ZUf-C9-vKX"/>
+                        <outlet property="changeUserButton" destination="OCd-uC-xcU" id="pzG-ke-I3h"/>
+                        <outlet property="manageCategoriesButton" destination="KIT-uC-apo" id="gSH-Pj-0df"/>
+                        <outlet property="manageProfileButton" destination="G0L-1L-v8g" id="4Q3-LR-PJp"/>
+                        <outlet property="nameLabel" destination="jd5-3a-IFo" id="9R9-JQ-xSU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAF-4P-b0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879" y="1204"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VOb-Pl-cvb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="x8h-Ua-ZSU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="X7b-8R-Ic4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="X92-t4-WB4"/>
+                        <segue destination="hCh-Sp-br8" kind="relationship" relationship="viewControllers" id="a9O-xP-dv6"/>
+                        <segue destination="VwB-h7-L3c" kind="relationship" relationship="viewControllers" id="w1n-H2-Mm0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfA-hz-i1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1067" y="389"/>
         </scene>
     </scenes>
 </document>
