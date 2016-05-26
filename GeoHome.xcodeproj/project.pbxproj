@@ -18,6 +18,15 @@
 		8276C6671CF77BBD0006DEC1 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6661CF77BBD0006DEC1 /* Scenario.swift */; };
 		8276C6691CF77D740006DEC1 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6681CF77D740006DEC1 /* Trigger.swift */; };
 		8276C66B1CF77E1F0006DEC1 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C66A1CF77E1F0006DEC1 /* Action.swift */; };
+		8276C66E1CF782A60006DEC1 /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C66C1CF782A60006DEC1 /* ShopCell.swift */; };
+		8276C66F1CF782A60006DEC1 /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8276C66D1CF782A60006DEC1 /* ShopCell.xib */; };
+		8276C6711CF78D7D0006DEC1 /* DetailedScenarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6701CF78D7D0006DEC1 /* DetailedScenarioViewController.swift */; };
+		8276C67A1CF7BEF80006DEC1 /* NATAdvertisingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6731CF7BEF80006DEC1 /* NATAdvertisingOperation.swift */; };
+		8276C67C1CF7BEF80006DEC1 /* NATMonitoringOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6751CF7BEF80006DEC1 /* NATMonitoringOperation.swift */; };
+		8276C67D1CF7BEF80006DEC1 /* NATOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6761CF7BEF80006DEC1 /* NATOperation.swift */; };
+		8276C67E1CF7BEF80006DEC1 /* NATOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6771CF7BEF80006DEC1 /* NATOperationCell.swift */; };
+		8276C67F1CF7BEF80006DEC1 /* NATRangingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6781CF7BEF80006DEC1 /* NATRangingOperation.swift */; };
+		8276C6801CF7BEF80006DEC1 /* NATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6791CF7BEF80006DEC1 /* NATViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,15 @@
 		8276C6661CF77BBD0006DEC1 /* Scenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 		8276C6681CF77D740006DEC1 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		8276C66A1CF77E1F0006DEC1 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		8276C66C1CF782A60006DEC1 /* ShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		8276C66D1CF782A60006DEC1 /* ShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
+		8276C6701CF78D7D0006DEC1 /* DetailedScenarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedScenarioViewController.swift; sourceTree = "<group>"; };
+		8276C6731CF7BEF80006DEC1 /* NATAdvertisingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATAdvertisingOperation.swift; sourceTree = "<group>"; };
+		8276C6751CF7BEF80006DEC1 /* NATMonitoringOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATMonitoringOperation.swift; sourceTree = "<group>"; };
+		8276C6761CF7BEF80006DEC1 /* NATOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATOperation.swift; sourceTree = "<group>"; };
+		8276C6771CF7BEF80006DEC1 /* NATOperationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATOperationCell.swift; sourceTree = "<group>"; };
+		8276C6781CF7BEF80006DEC1 /* NATRangingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATRangingOperation.swift; sourceTree = "<group>"; };
+		8276C6791CF7BEF80006DEC1 /* NATViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +84,37 @@
 		8276C64B1CF7741F0006DEC1 /* GeoHome */ = {
 			isa = PBXGroup;
 			children = (
+				8276C6721CF7BEF80006DEC1 /* iBeacons */,
 				8276C64C1CF7741F0006DEC1 /* AppDelegate.swift */,
 				8276C64E1CF7741F0006DEC1 /* ActiveScenariosViewController.swift */,
 				8276C6601CF7762A0006DEC1 /* ShopViewController.swift */,
 				8276C6621CF7763B0006DEC1 /* ProfileViewController.swift */,
 				8276C6501CF7741F0006DEC1 /* Main.storyboard */,
+				8276C6701CF78D7D0006DEC1 /* DetailedScenarioViewController.swift */,
 				8276C6641CF77B580006DEC1 /* User.swift */,
 				8276C6661CF77BBD0006DEC1 /* Scenario.swift */,
 				8276C6681CF77D740006DEC1 /* Trigger.swift */,
 				8276C66A1CF77E1F0006DEC1 /* Action.swift */,
+				8276C66C1CF782A60006DEC1 /* ShopCell.swift */,
+				8276C66D1CF782A60006DEC1 /* ShopCell.xib */,
 				8276C6531CF7741F0006DEC1 /* Assets.xcassets */,
 				8276C6551CF7741F0006DEC1 /* LaunchScreen.storyboard */,
 				8276C6581CF7741F0006DEC1 /* Info.plist */,
 			);
 			path = GeoHome;
+			sourceTree = "<group>";
+		};
+		8276C6721CF7BEF80006DEC1 /* iBeacons */ = {
+			isa = PBXGroup;
+			children = (
+				8276C6731CF7BEF80006DEC1 /* NATAdvertisingOperation.swift */,
+				8276C6751CF7BEF80006DEC1 /* NATMonitoringOperation.swift */,
+				8276C6761CF7BEF80006DEC1 /* NATOperation.swift */,
+				8276C6771CF7BEF80006DEC1 /* NATOperationCell.swift */,
+				8276C6781CF7BEF80006DEC1 /* NATRangingOperation.swift */,
+				8276C6791CF7BEF80006DEC1 /* NATViewController.swift */,
+			);
+			path = iBeacons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +149,11 @@
 				TargetAttributes = {
 					8276C6481CF7741F0006DEC1 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -143,6 +183,7 @@
 				8276C6571CF7741F0006DEC1 /* LaunchScreen.storyboard in Resources */,
 				8276C6541CF7741F0006DEC1 /* Assets.xcassets in Resources */,
 				8276C6521CF7741F0006DEC1 /* Main.storyboard in Resources */,
+				8276C66F1CF782A60006DEC1 /* ShopCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,14 +194,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8276C6711CF78D7D0006DEC1 /* DetailedScenarioViewController.swift in Sources */,
+				8276C67E1CF7BEF80006DEC1 /* NATOperationCell.swift in Sources */,
+				8276C67A1CF7BEF80006DEC1 /* NATAdvertisingOperation.swift in Sources */,
 				8276C64F1CF7741F0006DEC1 /* ActiveScenariosViewController.swift in Sources */,
+				8276C66E1CF782A60006DEC1 /* ShopCell.swift in Sources */,
 				8276C64D1CF7741F0006DEC1 /* AppDelegate.swift in Sources */,
+				8276C67C1CF7BEF80006DEC1 /* NATMonitoringOperation.swift in Sources */,
+				8276C6801CF7BEF80006DEC1 /* NATViewController.swift in Sources */,
 				8276C6631CF7763B0006DEC1 /* ProfileViewController.swift in Sources */,
 				8276C6671CF77BBD0006DEC1 /* Scenario.swift in Sources */,
 				8276C6691CF77D740006DEC1 /* Trigger.swift in Sources */,
 				8276C66B1CF77E1F0006DEC1 /* Action.swift in Sources */,
 				8276C6651CF77B580006DEC1 /* User.swift in Sources */,
 				8276C6611CF7762A0006DEC1 /* ShopViewController.swift in Sources */,
+				8276C67F1CF7BEF80006DEC1 /* NATRangingOperation.swift in Sources */,
+				8276C67D1CF7BEF80006DEC1 /* NATOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

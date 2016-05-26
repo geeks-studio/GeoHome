@@ -8,29 +8,55 @@
 
 import UIKit
 
+extension ShopViewController: UITableViewDelegate {
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 80.0
+  }
+}
+
+extension ShopViewController: UITableViewDataSource {
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return data.count
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("shopCell") as! ShopCell
+    cell.triggerNameLabel.text = data[indexPath.row].trigger.name
+    cell.actionNameLabel.text = data[indexPath.row].action.name
+    cell.priceLabel.text = "0.99$"
+    return cell
+  }
+}
+
 class ShopViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
+  var data = [Scenario]()
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  func populateWithDemoData() {
+    var trigger = Trigger(name: "Наступила ночь", description: "Наступило 23:00", apiUrl: "demo/isNight")
+    var action = Action(name: "Открыть окна на проветривание", description: "Переводит все окна в режим проветривания", apiUrl: "demo/openWindowsForVentilation")
+    var scenario = Scenario(name: "Открыть окна на ночь", trigger: trigger, action: action)
+    data.append(scenario)
     
+    trigger = Trigger(name: "Наступило утро", description: "Наступило 08:00", apiUrl: "demo/isMorning")
+    action = Action(name: "Открыть жалюзи", description: "Поднять жалюзи на всех окнах", apiUrl: "demo/openAllCurtains")
+    scenario = Scenario(name: "Поднять шторы", trigger: trigger, action: action)
+    data.append(scenario)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    tableView.delegate = self
+    tableView.dataSource = self
+    let nib = UINib(nibName: "ShopCell", bundle: nil)
+    tableView.registerNib(nib, forCellReuseIdentifier: "shopCell")
+    
+    populateWithDemoData()
+  }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+  }
 
 }
