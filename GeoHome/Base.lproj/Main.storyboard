@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="2691" y="389"/>
         </scene>
-        <!--Детальная информация-->
+        <!--Detailed Information-->
         <scene sceneID="A0B-zA-qtp">
             <objects>
                 <viewController id="tF7-4a-o7w" customClass="DetailedScenarioViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                             <constraint firstItem="WEy-rL-3vv" firstAttribute="top" secondItem="Rz0-5f-wqj" secondAttribute="bottom" constant="8" id="wBP-V5-bAR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Детальная информация" id="YHN-fv-4NM"/>
+                    <navigationItem key="navigationItem" title="Detailed Information" id="YHN-fv-4NM"/>
                     <connections>
                         <outlet property="actionNameLabel" destination="GJo-Lb-To0" id="Jhu-PL-fYe"/>
                         <outlet property="changeStatusButton" destination="Rz0-5f-wqj" id="awd-XC-6BA"/>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="3538" y="389"/>
         </scene>
-        <!--Магазин-->
+        <!--Shop-->
         <scene sceneID="NnO-sm-vC2">
             <objects>
                 <viewController id="hCh-Sp-br8" customClass="ShopViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,7 +151,7 @@
                             <constraint firstItem="BZn-Q6-QPx" firstAttribute="top" secondItem="4BL-jt-z5u" secondAttribute="top" constant="20" id="nzN-No-50Z"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Магазин" id="b85-Xq-OY1"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="shopping-cart" id="b85-Xq-OY1"/>
                     <connections>
                         <outlet property="tableView" destination="BZn-Q6-QPx" id="IHE-5J-dkr"/>
                     </connections>
@@ -160,7 +160,7 @@
             </objects>
             <point key="canvasLocation" x="1067" y="1204"/>
         </scene>
-        <!--Личный профиль-->
+        <!--Profile-->
         <scene sceneID="eVb-xL-xL5">
             <objects>
                 <viewController id="VwB-h7-L3c" customClass="ProfileViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,36 +172,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJk-b5-cWO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2016-01-26 20:44:26" translatesAutoresizingMaskIntoConstraints="NO" id="SJk-b5-cWO">
                                 <rect key="frame" x="260" y="28" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Dyb-Bg-7kp"/>
                                     <constraint firstAttribute="height" constant="80" id="hxg-0X-Jir"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вадим Дробинин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-3a-IFo">
-                                <rect key="frame" x="231" y="116" width="139" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vadim Drobinin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-3a-IFo">
+                                <rect key="frame" x="242" y="116" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория: Создатель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-MT-d3a">
-                                <rect key="frame" x="212" y="145" width="177" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Creator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-MT-d3a">
+                                <rect key="frame" x="232" y="145" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIT-uC-apo">
-                                <rect key="frame" x="209" y="174" width="182" height="30"/>
-                                <state key="normal" title="Управление категориями"/>
+                                <rect key="frame" x="235" y="174" width="131" height="30"/>
+                                <state key="normal" title="Manage categories"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0L-1L-v8g">
-                                <rect key="frame" x="217" y="212" width="166" height="30"/>
-                                <state key="normal" title="Управление аккаунтом"/>
+                                <rect key="frame" x="230" y="212" width="141" height="30"/>
+                                <state key="normal" title="Manage the account"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-uC-xcU">
-                                <rect key="frame" x="226" y="250" width="149" height="30"/>
-                                <state key="normal" title="Смена пользователя"/>
+                                <rect key="frame" x="237" y="250" width="127" height="30"/>
+                                <state key="normal" title="Change the profile"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -220,7 +220,7 @@
                             <constraint firstItem="KIT-uC-apo" firstAttribute="centerX" secondItem="IMI-ip-XM6" secondAttribute="centerX" id="sWt-Q3-nFD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Личный профиль" id="s4h-kY-cN5"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="avatar" id="s4h-kY-cN5"/>
                     <connections>
                         <outlet property="avatarImageView" destination="SJk-b5-cWO" id="yTn-U8-ALM"/>
                         <outlet property="categoryLabel" destination="0yE-MT-d3a" id="ZUf-C9-vKX"/>
@@ -254,11 +254,11 @@
             </objects>
             <point key="canvasLocation" x="1067" y="389"/>
         </scene>
-        <!--Активные сценарии-->
+        <!--Scenarios-->
         <scene sceneID="UKM-gC-zXa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o1n-ec-Ddf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Активные сценарии" id="g3s-Vi-Xjw"/>
+                    <tabBarItem key="tabBarItem" title="Scenarios" image="puzzle" id="g3s-Vi-Xjw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D7U-5y-eNt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -273,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="1879" y="389"/>
         </scene>
-        <!--Beacons Manager-->
+        <!--Beacons-->
         <scene sceneID="PIC-co-taf">
             <objects>
-                <viewController id="2kO-0T-Pvf" customClass="NATViewController" customModule="HiBeacons" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2kO-0T-Pvf" customClass="NATViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c3W-su-Qsb"/>
                         <viewControllerLayoutGuide type="bottom" id="SU0-kC-9Xq"/>
@@ -289,7 +289,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OperationCell" id="6pk-ps-9Ge" customClass="NATOperationCell" customModule="HiBeacons" customModuleProvider="target">
+                                    <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OperationCell" id="6pk-ps-9Ge" customClass="NATOperationCell" customModule="GeoHome" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6pk-ps-9Ge" id="PNP-lz-IuV">
@@ -329,7 +329,7 @@
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC9-Pk-Qcg">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="HiBeacons" id="6FH-Ci-3Lq"/>
+                                    <navigationItem title="Beacons" id="6FH-Ci-3Lq"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -344,7 +344,7 @@
                             <constraint firstItem="cC9-Pk-Qcg" firstAttribute="leading" secondItem="KnG-ac-YhH" secondAttribute="leading" id="wZl-ZG-hAf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Beacons Manager" id="1Hw-5j-HlY"/>
+                    <tabBarItem key="tabBarItem" title="Beacons" image="magnifying-glass" id="1Hw-5j-HlY"/>
                     <connections>
                         <outlet property="beaconTableView" destination="KnG-ac-YhH" id="sbs-id-gla"/>
                     </connections>
@@ -354,4 +354,11 @@
             <point key="canvasLocation" x="2691" y="1204"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_2016-01-26 20:44:26" width="1280" height="1280"/>
+        <image name="avatar" width="21" height="25"/>
+        <image name="magnifying-glass" width="25" height="25"/>
+        <image name="puzzle" width="25" height="25"/>
+        <image name="shopping-cart" width="25" height="25"/>
+    </resources>
 </document>

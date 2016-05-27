@@ -47,14 +47,14 @@ class ActiveScenariosViewController: UIViewController {
   var data = [Scenario]()
   
   func populateWithDemoData() {
-    var trigger = Trigger(name: "Подошел к двери", description: "Владелец телефона подошел ко входной двери", apiUrl: "demo/closeToExit")
-    var action = Action(name: "Выключить свет", description: "Выключает весь свет в квартире", apiUrl: "demo/lightsOff")
-    var scenario = Scenario(name: "Выключить свет", trigger: trigger, action: action)
+    var trigger = Trigger(name: "Come to the door", description: "Владелец телефона подошел ко входной двери", apiUrl: "demo/closeToExit")
+    var action = Action(name: "Lights off", description: "Выключает весь свет в квартире", apiUrl: "demo/lightsOff")
+    var scenario = Scenario(name: "Lights off", trigger: trigger, action: action)
     data.append(scenario)
     
-    trigger = Trigger(name: "Кончились продукты в холодильнике", description: "Холодильник не содержит продуктов выбранной категори", apiUrl: "demo/foodExpired")
-    action = Action(name: "Заказать новые продукты", description: "На сайте ABC заказывается заранее определенная корзина продуктов", apiUrl: "demo/orderFood")
-    scenario = Scenario(name: "Пополнить холодильник", trigger: trigger, action: action)
+    trigger = Trigger(name: "Food expired", description: "Холодильник не содержит продуктов выбранной категори", apiUrl: "demo/foodExpired")
+    action = Action(name: "Order new food", description: "На сайте ABC заказывается заранее определенная корзина продуктов", apiUrl: "demo/orderFood")
+    scenario = Scenario(name: "Do groceries", trigger: trigger, action: action)
     data.append(scenario)
   }
   

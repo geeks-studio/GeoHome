@@ -33,14 +33,14 @@ class ShopViewController: UIViewController {
   var data = [Scenario]()
   
   func populateWithDemoData() {
-    var trigger = Trigger(name: "Наступила ночь", description: "Наступило 23:00", apiUrl: "demo/isNight")
-    var action = Action(name: "Открыть окна на проветривание", description: "Переводит все окна в режим проветривания", apiUrl: "demo/openWindowsForVentilation")
-    var scenario = Scenario(name: "Открыть окна на ночь", trigger: trigger, action: action)
+    var trigger = Trigger(name: "Night starts", description: "Наступило 23:00", apiUrl: "demo/isNight")
+    var action = Action(name: "Open windows", description: "Переводит все окна в режим проветривания", apiUrl: "demo/openWindowsForVentilation")
+    var scenario = Scenario(name: "Open windows for the night", trigger: trigger, action: action)
     data.append(scenario)
     
-    trigger = Trigger(name: "Наступило утро", description: "Наступило 08:00", apiUrl: "demo/isMorning")
-    action = Action(name: "Открыть жалюзи", description: "Поднять жалюзи на всех окнах", apiUrl: "demo/openAllCurtains")
-    scenario = Scenario(name: "Поднять шторы", trigger: trigger, action: action)
+    trigger = Trigger(name: "Morning starts", description: "Наступило 08:00", apiUrl: "demo/isMorning")
+    action = Action(name: "Open curtains", description: "Поднять жалюзи на всех окнах", apiUrl: "demo/openAllCurtains")
+    scenario = Scenario(name: "Open curtains", trigger: trigger, action: action)
     data.append(scenario)
   }
   
