@@ -12,6 +12,12 @@ extension ShopViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 80.0
   }
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let alert = UIAlertController(title: "Set up Apple Pay", message: "You have to connect your credit card to Apple Pay account in order to buy items via In-App Purchases.", preferredStyle: .Alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .Default) { _ in })
+    self.presentViewController(alert, animated: true){}
+  }
 }
 
 extension ShopViewController: UITableViewDataSource {

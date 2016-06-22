@@ -27,6 +27,7 @@
 		8276C67E1CF7BEF80006DEC1 /* NATOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6771CF7BEF80006DEC1 /* NATOperationCell.swift */; };
 		8276C67F1CF7BEF80006DEC1 /* NATRangingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6781CF7BEF80006DEC1 /* NATRangingOperation.swift */; };
 		8276C6801CF7BEF80006DEC1 /* NATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8276C6791CF7BEF80006DEC1 /* NATViewController.swift */; };
+		EBF8A62F5C807F25170A26DA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E707C6F5B5FC2F7059C1787D /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,9 @@
 		8276C6771CF7BEF80006DEC1 /* NATOperationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATOperationCell.swift; sourceTree = "<group>"; };
 		8276C6781CF7BEF80006DEC1 /* NATRangingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATRangingOperation.swift; sourceTree = "<group>"; };
 		8276C6791CF7BEF80006DEC1 /* NATViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NATViewController.swift; sourceTree = "<group>"; };
+		8D93072460BC9CE3E55F28E4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DD03B1D914B3A4C59E678D1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E707C6F5B5FC2F7059C1787D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF8A62F5C807F25170A26DA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,8 @@
 			children = (
 				8276C64B1CF7741F0006DEC1 /* GeoHome */,
 				8276C64A1CF7741F0006DEC1 /* Products */,
+				D3F6FA7A2CA045AA4C460125 /* Pods */,
+				FC0721DFDD1ABA98347415B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +124,23 @@
 			path = iBeacons;
 			sourceTree = "<group>";
 		};
+		D3F6FA7A2CA045AA4C460125 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D93072460BC9CE3E55F28E4 /* Pods.debug.xcconfig */,
+				DD03B1D914B3A4C59E678D1C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC0721DFDD1ABA98347415B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E707C6F5B5FC2F7059C1787D /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8276C65B1CF7741F0006DEC1 /* Build configuration list for PBXNativeTarget "GeoHome" */;
 			buildPhases = (
+				2FF5B3ABCA02E6EA851F0C04 /* Check Pods Manifest.lock */,
 				8276C6451CF7741F0006DEC1 /* Sources */,
 				8276C6461CF7741F0006DEC1 /* Frameworks */,
 				8276C6471CF7741F0006DEC1 /* Resources */,
+				71A7B7F0C5627DA18693F4AD /* Embed Pods Frameworks */,
+				BAF31520B5D73DF8025AC04F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,11 +171,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Vadim Drobinin";
 				TargetAttributes = {
 					8276C6481CF7741F0006DEC1 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = X72G5VQBS8;
+						DevelopmentTeamName = "Vadim Drobinin";
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -188,6 +218,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FF5B3ABCA02E6EA851F0C04 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71A7B7F0C5627DA18693F4AD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAF31520B5D73DF8025AC04F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8276C6451CF7741F0006DEC1 /* Sources */ = {
@@ -272,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -312,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,23 +400,30 @@
 		};
 		8276C65C1CF7741F0006DEC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D93072460BC9CE3E55F28E4 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.GeoHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		8276C65D1CF7741F0006DEC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD03B1D914B3A4C59E678D1C /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoHome/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.GeoHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -361,6 +446,7 @@
 				8276C65D1CF7741F0006DEC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

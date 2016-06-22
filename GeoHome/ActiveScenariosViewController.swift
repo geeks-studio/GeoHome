@@ -7,8 +7,50 @@
 //
 
 import UIKit
+import CoreLocation
+
+extension ActiveScenariosViewController: CLLocationManagerDelegate {
+  func locationManager(manager: CLLocationManager, monitoringDidFailForRegion region: CLRegion?, withError error: NSError) {
+    print("Failed monitoring region: \(error.description)")
+  }
+  
+  func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    print("Location manager failed: \(error.description)")
+  }
+  
+  func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    for beacon in beacons {
+      let beaconMinor = beacon.major.integerValue
+      let beaconIsClose = beacon.proximity == .Near
+      if beaconIsClose {
+        self.beacons[beaconMinor]!["count"] = (self.beacons[beaconMinor]!["count"] as! Int) + 1
+        if (self.beacons[beaconMinor]!["count"] as! Int) > 10 { // подгоном
+          self.textViewLog.text = self.textViewLog.text + self.getTimestamp() + " " + (self.beacons[beaconMinor]!["url"] as! String) + "\n"
+          self.beacons[beaconMinor]!["count"] = 0
+        }
+      }
+    }
+  }
+  
+  func beaconRegionWithItem() -> CLBeaconRegion {
+    let beaconRegion = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "EBEFD083-70A2-47C8-9837-E7B5634DF524")!, identifier: "ruBeacon")
+    return beaconRegion
+  }
+  
+  func searchForBeacons() {
+    locationManager.requestAlwaysAuthorization()
+    let beaconRegion = beaconRegionWithItem()
+    locationManager.startMonitoringForRegion(beaconRegion)
+    locationManager.startRangingBeaconsInRegion(beaconRegion)
+  }
+}
 
 extension ActiveScenariosViewController {
+  func getTimestamp() -> String {
+    let timestamp = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+    return timestamp
+  }
+  
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "Show Detailed Scenario" {
       let scenario = sender as! Scenario
@@ -44,6 +86,19 @@ extension ActiveScenariosViewController: UITableViewDataSource {
 
 class ActiveScenariosViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
+  
+  let locationManager = CLLocationManager()
+  var beacons: [Int: [String: AnyObject]] = [1: ["count": 0, "url": "/api/openWindows"],
+                                             2: ["count": 0, "url": "/api/lightsOff"],
+                                             3: ["count": 0, "url": "/api/disablePower"]]
+  @IBOutlet weak var textViewLog: UITextView! {
+    didSet {
+      textViewLog.text = getTimestamp() + " Initializing...\n"
+      textViewLog.text = textViewLog.text + getTimestamp() + " Connecting with the server...\n"
+      textViewLog.text = textViewLog.text + getTimestamp() + " Server successfuly connected.\n"
+    }
+  }
+  
   var data = [Scenario]()
   
   func populateWithDemoData() {
@@ -64,13 +119,13 @@ class ActiveScenariosViewController: UIViewController {
     tableView.dataSource = self
     let nib = UINib(nibName: "ShopCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "shopCell")
-    
+    locationManager.delegate = self
     populateWithDemoData()
+    searchForBeacons()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
 }

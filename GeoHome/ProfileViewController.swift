@@ -18,6 +18,18 @@ class ProfileViewController: UIViewController {
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var avatarImageView: UIImageView!
   
+  
+  @IBAction func manageCategoriesPressed(sender: AnyObject) {
+    UIApplication.sharedApplication().openURL(NSURL(string: "http://endnikita.pythonanywhere.com/admin/")!)
+  }
+  @IBAction func manageAccountPressed(sender: AnyObject) {
+    UIApplication.sharedApplication().openURL(NSURL(string: "http://endnikita.pythonanywhere.com/admin/")!)
+  }
+  @IBAction func manageProfilePressed(sender: AnyObject) {
+    UIApplication.sharedApplication().openURL(NSURL(string: "http://endnikita.pythonanywhere.com/admin/")!)
+  }
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,7 +9,7 @@
         <!--GeoHome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ActiveScenariosViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ActiveScenariosViewController" customModule="GeoHome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,21 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XmN-r4-CjC">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="130" width="600" height="470"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kB-rk-7gf">
+                                <rect key="frame" x="0.0" y="72" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mGt-bC-axY"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XmN-r4-CjC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="52g-xj-Ay1"/>
+                            <constraint firstItem="1kB-rk-7gf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="APV-bK-Ff9"/>
+                            <constraint firstItem="XmN-r4-CjC" firstAttribute="top" secondItem="1kB-rk-7gf" secondAttribute="bottom" constant="8" id="B4W-Y2-aRh"/>
                             <constraint firstAttribute="bottom" secondItem="XmN-r4-CjC" secondAttribute="bottom" id="HIS-ex-Sae"/>
+                            <constraint firstItem="1kB-rk-7gf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KYR-HI-jZv"/>
                             <constraint firstAttribute="trailing" secondItem="XmN-r4-CjC" secondAttribute="trailing" id="Shb-yp-ydV"/>
-                            <constraint firstItem="XmN-r4-CjC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="buM-5m-No1"/>
+                            <constraint firstAttribute="trailing" secondItem="1kB-rk-7gf" secondAttribute="trailing" id="aNI-Nb-aba"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GeoHome" id="Ifd-kg-weS"/>
                     <connections>
                         <outlet property="tableView" destination="XmN-r4-CjC" id="lfh-GF-Iuh"/>
+                        <outlet property="textViewLog" destination="1kB-rk-7gf" id="MJF-WR-bWg"/>
                         <segue destination="tF7-4a-o7w" kind="show" identifier="Show Detailed Scenario" id="XXM-fz-m8b"/>
                     </connections>
                 </viewController>
@@ -194,14 +208,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIT-uC-apo">
                                 <rect key="frame" x="235" y="174" width="131" height="30"/>
                                 <state key="normal" title="Manage categories"/>
+                                <connections>
+                                    <action selector="manageCategoriesPressed:" destination="VwB-h7-L3c" eventType="touchUpInside" id="eLm-zk-Vhx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0L-1L-v8g">
                                 <rect key="frame" x="230" y="212" width="141" height="30"/>
                                 <state key="normal" title="Manage the account"/>
+                                <connections>
+                                    <action selector="manageAccountPressed:" destination="VwB-h7-L3c" eventType="touchUpInside" id="x6n-0S-bc2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-uC-xcU">
                                 <rect key="frame" x="237" y="250" width="127" height="30"/>
                                 <state key="normal" title="Change the profile"/>
+                                <connections>
+                                    <action selector="manageProfilePressed:" destination="VwB-h7-L3c" eventType="touchUpInside" id="bAk-1F-KMp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -19,6 +19,8 @@ class DetailedScenarioViewController: UIViewController {
   
   var scenario: Scenario?
   
+  
+  
   @IBOutlet weak var tableView: UITableView! {
     didSet {
       tableView.hidden = true
